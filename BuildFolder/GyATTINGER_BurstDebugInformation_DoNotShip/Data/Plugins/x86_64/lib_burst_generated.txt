@@ -1,4 +1,4 @@
-Library: D:\desktop\Schule\SWE\Remote\TestGame\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+Library: C:\Users\david\Desktop\Schule\SWE\local\GyATTINGER\TestGame\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --platform=Windows
 --backend=burst-llvm-15
 --target=AVX2
@@ -51,10 +51,10 @@ Library: D:\desktop\Schule\SWE\Remote\TestGame\Temp\BurstOutput\Data\Plugins\x86
 --assembly-defines=mscorlib;
 --linker-options=PdbAltPath="GyATTINGER_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=D:\desktop\Schule\SWE\Remote\TestGame\Temp\Burst
---key-folder=C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
---decode-folder=D:\desktop\Schule\SWE\Remote\TestGame\Library\Burst
---output=D:\desktop\Schule\SWE\Remote\TestGame\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+--temp-folder=C:\Users\david\Desktop\Schule\SWE\local\GyATTINGER\TestGame\Temp\Burst
+--key-folder=C:/Program Files/Unity 2022.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
+--decode-folder=C:\Users\david\Desktop\Schule\SWE\local\GyATTINGER\TestGame\Library\Burst
+--output=C:\Users\david\Desktop\Schule\SWE\local\GyATTINGER\TestGame\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10
@@ -140,10 +140,10 @@ Library: D:\desktop\Schule\SWE\Remote\TestGame\Temp\BurstOutput\Data\Plugins\x86
 --assembly-defines=mscorlib;
 --linker-options=PdbAltPath="GyATTINGER_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=D:\desktop\Schule\SWE\Remote\TestGame\Temp\Burst
---key-folder=C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
---decode-folder=D:\desktop\Schule\SWE\Remote\TestGame\Library\Burst
---output=D:\desktop\Schule\SWE\Remote\TestGame\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+--temp-folder=C:\Users\david\Desktop\Schule\SWE\local\GyATTINGER\TestGame\Temp\Burst
+--key-folder=C:/Program Files/Unity 2022.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
+--decode-folder=C:\Users\david\Desktop\Schule\SWE\local\GyATTINGER\TestGame\Library\Burst
+--output=C:\Users\david\Desktop\Schule\SWE\local\GyATTINGER\TestGame\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10

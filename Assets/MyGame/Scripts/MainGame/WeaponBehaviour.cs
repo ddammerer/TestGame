@@ -4,11 +4,15 @@ public class WeaponBehaviour : MonoBehaviour {
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform bulletSpawnPos;
     [SerializeField] private float bulletForce = 3f;
+    [SerializeField] private float fireRate = 2f; // Seconds between shots
 
     private Camera mainCamera;
+    private Animator camAnimator;
+    private float shootTimer;
 
     private void Awake() {
         mainCamera = Camera.main;
+        camAnimator = mainCamera.GetComponent<Animator>();
     }
 
     private void Update() {
@@ -20,19 +24,28 @@ public class WeaponBehaviour : MonoBehaviour {
         Vector3 mouseWorldPos = GetMouseWorldPosition();
         Vector3 direction = (mouseWorldPos - transform.position).normalized;
 
-        // Rotate the weapon towards the mouse
         RotateWeaponToMouse(direction);
     }
 
     private void HandleShooting() {
-        if (Input.GetMouseButtonDown(0)) {
-            ShootAtMouse();
+        shootTimer -= Time.deltaTime;
+
+        if (Input.GetMouseButton(0)) {
+            if (shootTimer <= 0f) {
+                ShootAtMouse();
+                shootTimer = fireRate;
+            }
+            // Enable recoil animation while firing
+            camAnimator.SetBool("IsFiring", true);
+        } else {
+            // Stop recoil animation immediately when mouse released
+            camAnimator.SetBool("IsFiring", false);
         }
     }
 
     private Vector3 GetMouseWorldPosition() {
         Vector3 mousePos = Input.mousePosition;
-        mousePos.z = Mathf.Abs(mainCamera.transform.position.z); // Set z to distance from camera
+        mousePos.z = Mathf.Abs(mainCamera.transform.position.z);
         return mainCamera.ScreenToWorldPoint(mousePos);
     }
 
@@ -45,7 +58,6 @@ public class WeaponBehaviour : MonoBehaviour {
         Vector3 mouseWorldPos = GetMouseWorldPosition();
         Vector2 direction = (mouseWorldPos - bulletSpawnPos.position).normalized;
 
-        // Instantiate and shoot the bullet
         FireBullet(direction);
     }
 

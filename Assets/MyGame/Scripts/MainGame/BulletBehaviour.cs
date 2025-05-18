@@ -12,7 +12,7 @@ public class BulletBehaviour : MonoBehaviour
             // Handle obstacle hit
             HandleObstacleHit(collision);
         } else if (collision.CompareTag("Player")) {
-            return;
+            HandlePlayerHit(collision);
         }
     }
 
@@ -20,14 +20,19 @@ public class BulletBehaviour : MonoBehaviour
         Invoke("DestroyBullet", 3f); 
     }
 
-    private void HandleEnemyHit(Collider2D enemy) {
-        // Implement enemy hit logic here
-        Destroy(enemy.gameObject); // Example: destroy the enemy
-        Destroy(gameObject); // Destroy the bullet
+    protected virtual void HandleEnemyHit(Collider2D enemy) {
+        enemy.GetComponent<ManageEnemy>().EnemyHealth -= 1; // Decrease enemy health
+        if(enemy.GetComponent<ManageEnemy>().EnemyHealth <= 0) {
+            Destroy(enemy.gameObject); // Destroy the enemy if health is 0
+        }
     }
 
     private void HandleObstacleHit(Collider2D obstacle) {
         Destroy(gameObject); // Destroy the bullet
+    }
+
+    protected virtual void HandlePlayerHit(Collider2D player) {
+        return;
     }
 
     private void DestroyBullet() {

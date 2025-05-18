@@ -110,6 +110,7 @@ Transform:
   m_Children:
   - {fileID: 880108339884677708}
   - {fileID: 128914332294734379}
+  - {fileID: 8772654616026971096}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4812150493606031644
@@ -177,6 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  playerHealth: 3
 --- !u!61 &3970624502561089884
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -222,3 +224,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.27, y: 4.22}
   m_EdgeRadius: 0
+--- !u!1 &8426219466275216656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8772654616026971096}
+  m_Layer: 0
+  m_Name: SpawnEnemyPos
+  m_TagString: SpawnPos
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8772654616026971096
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8426219466275216656}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.7, y: 57.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1858608587070479914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

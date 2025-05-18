@@ -4,6 +4,7 @@ public class PlayerMovement : MonoBehaviour {
     
     [SerializeField]
     private float moveSpeed = 5f;
+    public int playerHealth = 3; // Player health
 
     void Update() {
         float moveX = Input.GetAxisRaw("Horizontal"); // A/D or Left/Right

@@ -132,3 +132,4 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3812039218951657646, guid: 6f1a6163fc2563e4f9ed2b3591db4845, type: 3}
   bulletSpawnPos: {fileID: 4026450886686477170}
   bulletForce: 0.3
+  fireRate: 0.5

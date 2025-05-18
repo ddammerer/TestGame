@@ -15,7 +15,7 @@ public class MainMenuManager : MonoBehaviour {
         PlayerPrefs.SetInt("SelectedWeapon", selectedWeaponIndex);
         PlayerPrefs.Save();
 
-        SceneManager.LoadScene("MainGameScene"); // Replace with your game scene name
+        SceneManager.LoadScene("MainGameScene"); // Replace with your game scene 
     }
 
     public void ExitGame() {
